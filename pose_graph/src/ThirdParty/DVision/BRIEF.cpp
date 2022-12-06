@@ -14,7 +14,10 @@
 #include "../DUtils/DUtils.h"
 #include <boost/dynamic_bitset.hpp>
 #include <vector>
-
+#if (CV_MAJOR_VERSION==4)
+#include <opencv2/imgproc/imgproc_c.h>
+#include <opencv2/calib3d/calib3d_c.h>
+#endif
 using namespace std;
 using namespace DVision;
 

@@ -10,7 +10,10 @@
 #include <opencv2/core/eigen.hpp>
 #include <opencv2/imgproc/imgproc.hpp>
 #include <opencv2/calib3d/calib3d.hpp>
-
+#if (CV_MAJOR_VERSION==4)
+#include <opencv2/imgproc/imgproc_c.h>
+#include <opencv2/calib3d/calib3d_c.h>
+#endif
 #include "camodocal/camera_models/CameraFactory.h"
 #include "camodocal/sparse_graph/Transform.h"
 #include "camodocal/gpl/EigenQuaternionParameterization.h"
